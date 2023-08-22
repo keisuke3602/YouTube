@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "speedy-anthem-340212",
+  "private_key_id": "ceb97fd9f3a833bbd75b0d1d698e409a6782dd96",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDdAIvY3bnr1hfq\ngSht2orY8YXGzEsL8UxzuXlQ3ey+6eBkHfSuayxBD+M/OcMfJ8Q/ghhP+0o73Ecn\nFmOrMQ5DBDQwIB9cT6bMbIDATsFdwYPZ3mkpnm1qRwO0LubCwlkW19JhSJKSvgJg\ncqj6EGgxeZ7VTtGCB5QkhvAkSQPGtZsIK3Kz0CJ9kEaZbrMiulupq04S5TpX6eAE\nJUjtKGsLU1bR91DpCgK5wEFnjfVAGyW7v6JxhJ4upLvRdT4zdFAq2LFm1z7eP+rW\n3TSSR2ckemN1L4tfV5dUxaFGBF790nHmGNfsA0tyfclO3XTDDYE2NW/tZXTXldU9\nzKnxj6e3AgMBAAECggEAFCdfGXVK5atd/fguUCpMXDFWUkVCGMI2Bx2kZw/97YEV\ngfvLWvaSEBLbVeI2HYq6VlJOVkjjwaa6ZGGh0DRGiS0Cd1sOkRQAcYb5jNAByUOC\n+yTRsUZt0vHL8CwQxjUD+9XNrSp5l2E1hUcfisJhRhXButEXwQRg6Z3Wm3B/JCkz\nKieX9InyfbeETKd7qpTuZsGDW0p3INB+y5ziAoEqbjE34XFbDwKCDPG7LpTjmOUf\nnHVXpFtwPJuLFFPY9Qi2zDrPRcI8aKkfd/P5iB1z9w1ePGNMei8o413vWW4R9qLx\nldMJn5oE+MJ42F0pEQsY8OVebVg9ANjecklOYjEABQKBgQDwNj8YtQtBQAjzSgOP\nYhwCmt/tyG6gzwy1TwB6cA0DZ/ysTKOKuUS5YuBIDW1/hZvDO8mZwL7XN673GbBN\nl//Gb/aXWFCBX9qvB3KVgXdk0jNz+WlBxq4ziCccZtvsmHp7EfzG3ZYAU8DumWkY\njsFjnovuNwViMk2sGdhHnr4AWwKBgQDrhxSW/FpkZHGAJorYRn5O9lbyg72Ucl7d\nYwXEjlGoTX3xMNOBosc7nOsl/lnZsSD6N0Xk+r6DQ0zoNjLBUrcLsS02PSa4OsIt\nx1g5gFqjqDXKE/w4yNg0bFs9AFYy15ZHXgKEo5z3C6hKEF7RQxbv898UJ3j3VcPl\nlXn6NurU1QKBgQCu45/uuil2mUuq7jFHXHPuRZpRwkMhW33yJ5G+kwQ2fahOPgI4\nBwmNO/r1GqmlVb6BV29BPT707Lq7d32QEOGNNYlAyXDbsNFD69U2Gqu1wQDrKCTF\nWgUMyc1H9W+bg6xxHDiBBWWn2VK3pQQKeC0+/Xj9uBt4Ug2RBsQb6OyGzwKBgQCM\nh2F6oQFSCzhJjTWky5LLjGHee0pfS0pc75teZshEElCF22snWzdi00LevX9gyzXw\n9Y/HivCnIz29A7GO9cpvuHxQc3Yp0C1R4TI7xODP6yqE8x23x+ZwiQJ7SDsmRMnO\ntUHtYC3knVkBL/lTBKOn8it1PAQKF2s2DdTkvWWqLQKBgQDX6sPGVjV0wHxOjA/O\nndn3L6M+AkPSvN1DCtdEdD4OawoUi8EPNAklP/u1hEHlft/isukSabig/KPcTtOP\nobLdQPV/iPu2l/gcxTd4hi924h7f65e0VUReYx9SdYhvHE8rbK4x4MmjEsPmSyD2\nbFIIg/6zGVQYU58BwRiKSgwWzw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "youtube-long-format@speedy-anthem-340212.iam.gserviceaccount.com",
+  "client_id": "102447323174981021815",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/youtube-long-format%40speedy-anthem-340212.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

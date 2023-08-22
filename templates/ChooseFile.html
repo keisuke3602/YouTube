@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select a file</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").on('submit', function(e){
+                e.preventDefault();
+                $("#loading").show();
+
+                $.ajax({
+                    url: '/create_video',
+                    type: 'POST',
+                    data: {
+                        selected_file: $("#files").val(),
+                        selected_rows: $("#rows").val()},
+                    success: function(){
+                        $("#loading").hide();
+                        window.location.href = "/";
+                    },
+                    error: function(){
+                        alert("An error occurred.");
+                        $("#loading").hide();
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select a File to Create a Video</h2>
+    <form method="post">
+        <label for = 'files'>Choose a file:</label>
+        <select id="files" name="selected_file">
+            {% for file in files %}
+            <option value="{{ file }}">{{ file }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for = "rows">Enter number of rows: </label><br>
+        <input type="number" id="rows" name="selected_rows" min="1">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="loading">
+        <img src="static/loading.gif" alt="Loading..."/>
+    </div>
+</body>
+</html>
