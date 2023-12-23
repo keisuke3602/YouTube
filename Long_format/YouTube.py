@@ -36,7 +36,7 @@ def create_video(selected_file, selected_rows):
             return
 
 
-        bgm = AudioFileClip('/Users/keisukewatanabe/Desktop/moviepy/music/')
+        bgm = AudioFileClip('/Users/keisukewatanabe/Documents/GitHub/YouTube/Assets/music/Kevin_MacLeod_-_Canon_in_D_Major.mp3')
         clips = []
         audio_clips = []
         start_time = 0
