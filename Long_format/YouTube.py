@@ -1,20 +1,17 @@
-"""
-pip install moviepy
-pip install ffmpeg-python
-pip install Pillow==8.2.0
-"""
+import os
 import glob
 import gspread
 import datetime
 import textwrap
 import numpy as np
+from dotenv import load_dotenv
 from moviepy.config import change_settings
 from moviepy.editor import *
 from moviepy.editor import AudioFileClip
 from moviepy.editor import ImageClip
 from pydub import AudioSegment
 from google.cloud import texttospeech
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 change_settings({"IMAGEMAGICK_BINARY": "/usr/local/bin/convert"})
 
 def add_silence_to_audio(audio_file_path, silence_duration_before = 600, silence_duration_after = 700):
@@ -28,9 +25,10 @@ def create_video(selected_file, selected_rows):
         scope = ["https://spreadsheets.google.com/feeds",
                 "https://www.googleapis.com/auth/spreadsheets",
                 "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/keisukewatanabe/', scope)
-        client = gspread.authorize(creds)
-        sheet = client.open("YouTube_Long_Format").sheet1
+        service_account_path = os.getenv('GOOGLE_CREDENTIALS')
+        creds = Credentials.from_service_account_file(service_account_path, scopes=scope)
+        gsheet_client = gspread.authorize(creds)
+        sheet = gsheet_client.open("YouTube_Long_Format").sheet1
         selected_rows = int(selected_rows)
         texts = sheet.col_values(1)[:selected_rows]
         if selected_rows > len(texts):
