@@ -36,12 +36,12 @@ def create_video(selected_file, selected_rows):
             return
 
 
-        bgm = AudioFileClip('/Users/keisukewatanabe/Documents/GitHub/YouTube/Assets/music/Kevin_MacLeod_-_Canon_in_D_Major.mp3')
+        bgm = AudioFileClip('./Assets/music/Kevin_MacLeod_-_Canon_in_D_Major.mp3')
         clips = []
         audio_clips = []
         start_time = 0
 
-        key_path = "/Users/keisukewatanabe/Desktop/Shorts/"
+        key_path = "/Users/keisukewatanabe/Documents/GitHub/YouTube/.keys/"
         client = texttospeech.TextToSpeechClient.from_service_account_json(key_path)
         
         file_list = glob.glob('input/' + selected_file)
