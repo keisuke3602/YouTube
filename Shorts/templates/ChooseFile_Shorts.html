@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select a file for Shorts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").on('submit', function(e){
+                e.preventDefault();
+                $("#loading").show();
+
+                $.ajax({
+                    url: '/create_video',
+                    type: 'POST',
+                    data: {
+                        num_videos: $("#rows").val()},
+                    success: function(response){
+                        $("#loading").hide();
+                        if(response != ''){
+                           alert(response);
+                        } else {
+                            window.location.href = "/";
+                        }
+                    },
+                    error: function(){
+                        alert("An error occurred.");
+                        $("#loading").hide();
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select a File to Create a Short</h2>
+    <form method="post">
+        <label for = "rows">Enter number of videos: </label><br>
+        <input type="number" id="rows" name="num_videos" min="1">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="loading">
+        <img src="static/loading.gif" alt="Loading..."/>
+    </div>
+</body>
+</html>
